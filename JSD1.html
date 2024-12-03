@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Day 1</title>
+</head>
+<body>
+    <h1>Javascript Day 1</h1>
+    <h3>Importing Javascript</h3>
+    <p>
+        Javascript is used to define the behaviour of the website which can be imported into html file using
+        two ways,
+        <ul>
+            <li>Internal JS:where the Javascript is written inside the html file using Script Tag</li>
+            <li>External JS:where the Javascript is written in a seperate file in .js extension and linked into html file using script tag</li>
+        </ul>
+        The version of Javascript is ES2015 (Egma Script)
+    </p>
+    <h3>Javascript Output</h3>
+    <p>
+        The output of the Javascript is displayed using 4 different ways
+        <ol>
+            <li>document.getElementById.innerHTML:the output is displayed by passing the content to elements through ID</li>
+            <li>document.write():Used to display the contents inside the function</li>
+            <li>window.alert():used to pop up a alert box</li>
+            <li>console.log():Used for testing purpose if the contents inside this function runs smoothly then we implement it in real time</li>
+        </ol>
+        These are the most used one to display Javascript outputs other than this there is a <mark> windows.print() </mark>  to print the entire screen
+        example for each
+    </p>
+    <h4>1.innerHTML</h4>
+    <p id="one"> Normal paragraph</p>
+    <h4>2.document.write()</h4>
+    <script>
+        document.write("Hello world");
+    </script>
+    <h4>3.window.alert()</h4>
+    <p>The output will be like this</p>
+    <img src="./Screenshot 2024-10-08 122747.jpg" height="300px" width="700px">
+    <h4>4.console.log()</h4>
+    <p>The output will be like this</p>
+    <img src="./Screenshot 2024-10-08 123527.jpg" height="300px" width="700px">
+    <h4>5.windows.print()</h4>
+    <button onclick="window.print()">Click Me</button>
+    <script>
+        document.getElementById("one").innerHTML="Pargraph Changed using JS";
+        window.alert("Hello world");
+        console.log(5+456+900+678);
+    </script>
+    <h3>Statements</h3>
+    <p id="two"></p>
+    <script>
+        let x,y,z;
+        x=100;
+        y=100;
+        z=x+y;
+        document.getElementById("two").innerHTML=z;
+    </script>
+    <p>Lines of codes is known as Statements</p>
+    <h3> JS Variables</h3>
+    <p> 
+        Variables are the containers used to store the data there are 4  ways 
+        to declare a Variable in Javascript and they are
+        <ul>
+            <li>Var: is a keyword to declare a Variable</li>
+            <li>Let:is the advanced version of Var</li>
+            <li>const:is the keyword used to declare the universal values such as pie the data stored inside the Variables declared using this keyword can't be changed</li>
+            <li>Auto:without using any keywords we can declare Variables like this x=0;</li>
+        </ul>
+    </p>
+    <p  id="three"> Javascript </p>
+    <script>
+       function myfunction()
+       {
+        document.getElementById("three").innerHTML="Hello Javascript";
+       }
+    </script>
+    <button type="button" onclick="myfunction()">Click here</button>
+   
+    <script>
+        //Hoisting 
+        console.log(b);
+        var b=3;
+        console.log(a);
+        let a=2;
+    </script>
+    <script>
+        //Var can be accessed outside the defined block causing security compramises to overcome this introduced Let & const it's a global scoped
+        if(true){
+            var c=3
+            c=10;
+            console.log(c);
+        }
+        var c=5;
+        console.log(c); 
+    </script>
+    <script>
+        //Let can't be accessed outside the defined block and it can't be redeclared in the same block  but it can be re-assigned in the same block  it's a function scoped
+        if(true){
+            let d=4;
+            d=8;
+            console.log(d);
+
+           
+        }
+        let d=6;
+        console.log(d); 
+    </script>
+    <script>
+        //const can't be accessed outside the defined block and it can't be redeclared & re assigned in the same block it's a function scoped
+        if(true){
+            const h=4;
+           
+            console.log(h);
+            
+        }
+        
+    </script>
+</body>
+</html>

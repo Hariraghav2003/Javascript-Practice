@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Day3</title>
+</head>
+<body>
+    <h1>Objects!!</h1>
+    <p>
+        An object is like a reak time which has several properties,Ex:Car it's a object which has several properties such as break accel clutch headlight color etc..
+        <br>
+        <code>
+            const car={type:"maruti",model:"suzuki",color:"grey"} <br>
+        </code>
+        this is the sample code where car is the object which has 3 properties such as type,model,color and each has values maruti,suzuki,grey.
+    </p>
+    <hr>
+    <h4>Javascript object properties</h4>
+    <p>
+        The Javascript object properties can be accessed or modified in below ways,
+        <ol>
+            <li>
+                <b>Accessing properties of  object:</b> The properties of the object can be accessed in 3 ways
+                but the most common is using dot(.) operator <br>
+                <code>
+                    const car={type:"maruti",model:"suzuki",color:"grey"} <br>
+                    console.log(car.color); <br>
+                </code>
+                The <mark> car.color</mark> access the car object's color property using dot operator and prints the value using console.log
+            </li>
+            <li>
+                <b> Adding new properties: </b> to add new properties we code like this <br>
+                <code>
+                    car.cc="1220cc" <br>
+                </code>
+                where cc is a new property of car which is added to car like <mark> car.cc="1220"</mark> 
+            </li>
+            <li>
+                <b> Deleting properties:</b> to delete new properties we code like this <br>
+                <code>
+                    delete car.cc; <br>                   
+                </code>
+                here the newly added cc property is deleted using delete keyword
+            </li>
+        </ol> 
+    </p>
+    <hr>
+    <h4>Javascript object methods</h4>
+    <p>
+        The Javascript object methods are declaring function as an object property like this <br>
+        <code>
+            car.carname= function(){ <br>
+                return this.type+""+this.model; <br>
+            }; <br>
+            console.log(car.carname()); <br>
+        </code>
+        here car name is an object method because it's declared as a function.Like this we can declare by adding or we can declare when we define the object.
+        Important note: we must use this keyword while handling objects inside a function.
+    </p>
+    <h4>Javascript object display</h4>
+    <p>
+        The Javascript objects can be displayed in 4 ways
+        <ol>
+            <li>Object values:It display the values of object</li>
+            <li>Object enteries:It display the object with their property and values</li>
+            <li>Stringyyfy:displays object in JSON format</li>
+            <li>loop:used to diplay the object which has more properties using for loop</li>
+        </ol>
+    </p>
+    <h4>Javascript object constructor</h4>
+    <p>Creating a object using this and new keyword</p>
+    <script>
+        const car={type:"maruti",model:"suzuki",color:"grey"}
+        console.log(car.color);
+        car.cc="1220cc"
+        console.log(car.cc);
+        delete car.cc;
+        console.log(car.cc);
+        car.carname= function(){
+            return this.type+""+this.model;
+        };
+        console.log(car.carname());
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day 7</title>
+</head>
+<body>
+    <h1>JavaScript Arrays </h1>
+    <p>
+        Array is the collection of strings or integers or multiple data types as a single value we can access those elements
+        using their index value and using multiple array methods which is based on the action which we are going to perform 
+        some common methods are
+        <ul>
+            <li>to convert array into string we use toString() method</li>
+            <li>to check the length of the array we use length function</li>
+            <li>to sort the array in asecnding order we use Sort method  </li> 
+            <li>to print the array we can use the array variable for printing the whole array for particular value we use the index value of the element</li>
+        </ul>    
+    </p>
+    <h5>JS Array Methods</h5>
+    <p>
+        Basic JavaScript methods are,
+        <ol>
+            <li>at():To access a particular element of an array using index (negative index values are also allowed ) </li>
+            <li>join():To join an element in an array</li>
+            <li>pop():delete the  first element of an arrays and prints that poped element</li>
+            <li>push():adds the element at the end of an array</li>
+            <li>shift():removes the first array element</li>
+            <li>unshift():adds the element at the begining of the array</li>
+            <li>delete:deletes the particular element in array using their index values but doesn't the allocated memory of that element which means it returns undefined</li>
+            <li>concat():to join two arrays</li>
+            <li>copywithin():To copy a element as a replace of another element we can copy a single value or multiple values</li>
+            <li>flat():Converts a nested arrays into a single array if we want to use a function within this method we use flatmap()</li>
+            <li>Splice():used to add a new element into an array this action will be performed in the original array if we orginal wants to be kept we can use tospliced()</li>
+            <li>Slice():to cut out a elements from an array</li>
+        </ol>
+        JS array serach is same as the string search method
+    </p>
+    <script>
+        const car=["BMW","Hello",23,"Apple",24];
+        console.log(car);
+       let slice= car.slice(1);
+        console.log(slice);
+        // car.copyWithin(0,1,4);
+        // console.log(car);
+        // car.splice(1,2,"lemon");
+        // console.log(car);
+        // console.log(cars);
+        // cars[4]=20;//like this we can add an element to array by specifying the index value
+        // console.log(cars);
+        // console.log(cars.sort());
+        // cars.push("hari");
+        // console.log(cars);
+        // cars.pop();
+        // console.log(cars);
+        // console.log(cars.at(2));
+        // let splice=cars.splice(1,3,"lemon");
+        // console.log(cars);
+        // let copy=cars.copyWithin(0,2,3);
+        // console.log(cars);
+        //  let slice=cars.slice(1);
+        // console.log(slice);
+    </script>
+</body>
+</html>

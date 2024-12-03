@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Day 2</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <!-- <script>
+        let person = prompt("Please enter your name", "Harry Potter");
+        if (person != null) {
+        document.getElementById("demo").innerHTML =
+        "Hello " + person + "! How are you today?";
+        }
+    </script> -->
+
+    <h2>Invocation function</h2>
+    <p> 
+        Invocation function is calling a function using objects or directly writting the function 
+        like this There are six different ways to invoke a function and they are
+        <ol>
+            <li>Direct Invocation:calling the function by it's name</li>
+            <li>Method Invocation:calling the function through object</li>
+            <li>Constructor Invocation:calling the function through object but the object and function name will be same</li>
+            <li>Indirect Invocation:calling the function indirectly using call, apply, and bind </li>
+            <li>Immediately Invoked Function Expression:calling the function Immediately </li>
+            <li>Arrow Function Invocation:declaring functions as Expressions using arrows</li>
+        </ol>
+    </p>
+    <h4>Direct Invocation</h4>
+    <p>calling the function using thr function name </p>
+    <p>
+        The code will be like this, <br>
+        <code>
+            function directinvocation(a,b) <br>
+            { <br>
+                let c=a+b; <br>
+                document.getElementById("di").innerHTML= c; <br>
+            } <br>
+            directinvocation(20,20); <br>
+        </code>
+        and the output will be,
+    </p>
+    <p id="di">  </p> 
+    <script>
+        function directinvocation(a,b)
+        {
+            let c=a+b;
+            document.getElementById("di").innerHTML= c;
+        }
+        directinvocation(20,20);
+    </script>
+    
+    <h4>Method Invocation</h4>
+    <p>
+        Method Invocation is calling function using object to create object for a function we need to decalre the function inside a variable i.e, object,like this
+        <br> <code>
+            let addtion={ <br>
+                methodinvoction:function(a,b){ <br>
+                    let c=a+b; <br>
+                    document.getElementById("mi").innerHTML=c; <br>
+                } <br>
+            } <br>
+            addtion.methodinvoction(30,30); <br>
+        </code>
+        Here <mark>addtion</mark> is the object inside that object <mark>methodinvoction</mark> is declared 
+        like this <mark> addtion.methodinvoction(30,30);  </mark> we invoke a methodinvoction function using dot operator
+    </p>
+    <p id="mi"></p>
+    <script>
+        let addtion={
+            methodinvoction:function(a,b){
+                let c=a+b;
+                document.getElementById("mi").innerHTML=c;
+            }
+        }
+        addtion.methodinvoction(30,30);
+    </script>
+    <h4>Constructor Invocation</h4>
+    <p>
+        Constructor Invocation where the function will be called using objects the code will be like this,<br>
+        <code>
+            function Constructorinnvocation (a,b){ <br>
+                this.c=a+b; <br>
+            } <br>
+             let d= new Constructorinnvocation(40,40); <br>
+             document.getElementById("ci").innerHTML=d.c; <br>
+        </code>
+        Here the <mark>new</mark> keyword creates a object i.e d and  <mark> this </mark> keyword creates a object inside a function i.e c using these objects we invoke a function
+    </p>
+    <p id="ci"></p>
+    <script>
+         function Constructorinnvocation (a,b){
+           this.c=a+b;    
+        }
+        let d= new Constructorinnvocation(40,40);
+        document.getElementById("ci").innerHTML=d.c;
+    </script>
+    <h4>Indirect Invocation</h4>
+    <p>
+        indirect Invocation is calling the function indirectly using call,apply and bind keyword usage of this keyword will differs based on the variable which we 
+        are going to use 
+        <mark> for object variables we use call the example code, </mark> <br>
+        <code>
+            function indirectinvocationc(a,b) <br>
+            { <br>
+                let sum=a+b; <br>
+                document.getElementById("iic").innerHTML=sum; <br>
+            }
+            let c={a:40,b:50}; <br>
+            indirectinvocationc.call(c,c.a,c.b); <br>    
+        </code>
+        <p>Here the <mark> c is a object variable </mark> so we use call keyword to call the function indirectinvocationc</p>
+        <p id="iic"></p>
+        <mark> for array variables we use apply the example code, </mark> <br>
+        <code>
+            function indirectinvocationa(a,b,d) <br>
+            { <br>
+                let sum=a+b+d; <br>
+                document.getElementById("iia").innerHTML=sum;<br>
+            } <br>
+            let j=[40,60,10]; <br>
+            indirectinvocationa.apply(null,j); <br>    
+        </code>
+        <p>Here the <mark> j is an array variable </mark> so we use apply keyword to call the function indirectinvocationa</p>
+        <p id="iia"></p>
+        <mark> Bind function is used to declare a function inside a variable  </mark> <br>
+        <code>
+            function indirectinvocationb(a,b) <br>
+            { <br>
+                sum=a+b; <br>
+                document.getElementById("iib").innerHTML=sum; <br>
+            } <br>
+           let iib=indirectinvocationb.bind(null,60,30); <br>
+           iib(); <br>
+        </code>
+        <p>
+            Here the <mark>iib</mark> variable has been binded with the function indirectinvocationb using bind keyword
+        </p>
+        <p id="iib"></p>
+    </p>
+   
+    <script> //indirectinvocationcall
+        function indirectinvocationc(a,b)
+        {
+            let sum=a+b;
+            document.getElementById("iic").innerHTML=sum;
+        }
+        let c={a:40,b:50};
+        indirectinvocationc.call(c,c.a,c.b);
+    </script>
+    <script> //indirectinvocationapply
+        function indirectinvocationa(a,b,d)
+        {
+            let sum=a+b+d;
+            document.getElementById("iia").innerHTML=sum;
+        }
+        let j=[40,60,10];
+        indirectinvocationa.apply(null,j);
+    </script>
+    <script> //indirectinvocationbind
+        function indirectinvocationb(a,b)
+        {
+            sum=a+b;
+            document.getElementById("iib").innerHTML=sum;
+        }
+       let iib=indirectinvocationb.bind(null,60,30);
+       iib(); 
+    </script>
+    <h4> Immediately Invoked Function Expression </h4>
+    <p>
+        calling the function Immediately when it is declared or defined like this <br>
+    </p>
+    <code>
+    (function Immediateinvocation(a,b){ <br>
+        let c=a+b; <br>
+        document.getElementById("iif").innerHTML=c; <br>
+    })(20,100); <br>
+    </code>
+    <p id="iif"></p>
+    <script>
+        (function Immediateinvocation(a,b){
+            let c=a+b;
+            document.getElementById("iif").innerHTML=c;
+        })(20,100);
+    </script>
+    <h4 id="af">Arrow function</h4>
+    <p>Arrow function is declaring functions as Expressions like this </p>
+    <code>
+        const add = (a, b) => a + b; <br>
+        document.getElementById("af").innerHTML=add(8,8); <br>
+    </code>
+    <p id="af"></p>
+    <script>
+        const add = (a, b) => a + b;
+        document.getElementById("af").innerHTML=add(8,8); 
+    </script>
+    <p>
+        Including this there are some more functions and they are 
+        <ol>
+            <li>Anonymous Function:These functions are passed as a arguments or declared in a variable</li>
+            <li>Callback Function:These functions are passed as a arguments to another and then they are called in that function</li>
+            <li>Generator function:The Generator function is a recursive function</li>
+            <li>Async function:Async function waits and check for the requirements and then runs the function declared in the await</li>
+        </ol>
+    </p>
+    <h4>Call back function</h4>
+    <p>
+        callback function where a function is a passed as a argument to another function and then they are called inside that function the eaxample code,<br>
+        <code>
+            function greet(name, callback) { <br>
+                console.log( name); <br>
+                callback(20,20); <br>
+            } <br>
+    
+            function sum(a,b) { <br>
+                let sum=a+b; <br>
+                console.log(sum); <br>
+            } <br>
+            greet('20+20:', sum); <br>
+        </code>
+        In the above code the function greet is called by passing sum (function) as arguments and it's called inside that function
+    </p>
+    <p id="cf"></p>
+    <p id="fc"></p>
+    <script>
+        function greet(name, callback) {
+            document.getElementById("cf").innerHTML=name;
+            callback(20,20);
+        }
+
+        function sum(a,b) {
+            let sum=a+b;
+            document.getElementById("fc").innerHTML=sum;
+        }
+        greet('20+20:', sum);
+
+    </script>
+</body>
+</html>

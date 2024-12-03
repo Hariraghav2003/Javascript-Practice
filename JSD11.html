@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day 11</title>
+</head>
+<body>
+    <h1>JS Sets</h1>
+    <p>
+        JS sets are similar to Array and object but the difference is sets don't allow duplicates it has 6 methods,
+        <ol>
+            <li>.add():to add a new element</li>
+            <li>.has():to search for a particular element</li>
+            <li>.foreach();to display all the elements in the set</li>
+            <li>.values():to return the values in the set</li>
+            <li>.keys():to return keyvalues in the set but set has no key values so the value will be it's key</li>
+            <li>.enteries():to return key value pair</li>
+        </ol>
+    </p>
+    <h1>JS Map</h1>
+    <p>
+        JS Maps are similar to Set but it allows duplicates to avoid it we can pass set into map by using set() method and has 4 addtional methods,
+        <ol>
+            <li>.get():to get a particular element from the map</li>
+            <li>.clear():to delete the entire map</li>
+            <li>.delete():to delete a particular element in a map</li>
+            <li>.size:to check the size of the map</li>
+        </ol>
+
+    </p>
+    <h1>JS Closure</h1>
+    <p>
+        JavaScript Closure function has the access to the variable which is outside it's block even after it's process is completed
+        <code>
+            function Closure(){ <br>
+                let c="Hello I am a variable outside the cl block"; <br>
+                function cl(){ <br>
+                    console.log(c); <br>
+                } <br>
+                 cl(); <br>
+            } <br>
+            Closure(); <br>
+        </code>
+        Here <mark> cl() </mark> is the closure function since it has access to the parent variable c even it finishes the execution.
+    </p>
+    <h1>JS Hoisting</h1>
+    <p>
+        JS Hoisting are variables or function which throws error.if var is hoisted it throws undefined if let is hoisted it shows error.
+    </p>
+    <script>
+        const fruit=new Set(["apple","orange","mango","guva","orange"]);
+        console.log (fruit.size);
+        console.log(fruit.keys());
+        const fruits=new Map();
+        fruits.set("apples", 500);
+        fruits.set("bananas", 300);
+        fruits.set("oranges", 200);
+        console.log(fruits.keys());
+        console.log(fruits.values());
+        console.log(fruits.get("apples"));
+        // Closure function
+        function Closure(){
+            let c="Hello I am a variable outside the cl block";
+            function cl(){
+                console.log(c);
+            }
+             cl();
+        }
+        Closure();
+        //Hoisting 
+        console.log(b);
+        var b=3;
+        console.log(a);
+        let a=2;
+    </script>
+</body>
+</html>

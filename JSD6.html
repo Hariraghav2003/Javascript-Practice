@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day 6</title>
+</head>
+<body>
+    <h1>String Search Methods &  Integers </h1>
+    <p>
+        String search methods are used to search a particular letter or word in a specifed string based on their index values or based on values
+        <ol>
+            <li>String.indexOf(): is used to search a string based on their index values and returns the first occurance of the given string and also we can customize the starting index  if the value is found it returns index of the string </li>
+            <li>Sting.lastIndexof():same as firstindexof() but it return the last occurance of the given string</li>
+            <li>String.search(): is used tosearch the string based on their values in this method we can't customize the starting index if the value is found it returns 0 if not found returns -1 </li>
+            <li>String.match():returns the first occurance of the string</li>
+            <li>String.matchAll():returns the all occurance of the string</li>
+            <li>String.includes():Returns whether the given string is present or not in that string</li>
+            <li>String.startswith():Returns whether the given string starts with a particular value</li>
+            <li>String.startswith():Returns whether the given string ends with a particular value</li>
+        </ol>
+        All these methods are case senstive so if we need to search irrespectiv of the case we can use /i
+    </p>
+    <p>
+        We can also convert the strings to numbers using parseInt or number to string using tostring()
+        to check the type we use typeof() method
+    </p>
+    <h3>Number Properties</h3>
+    <p>
+        There are two important number properties <b>MIN_SAFE_INTEGER,MAX_SAFE_INTEGER</b>
+        <ul>
+            <li> MIN_SAFE_INTEGER:Minsafeinteger is the smallest safe integer value (-9007199254740991) below this value JS can produce incorrect valus or precision loss will be there </li>    
+            <li> MAX_SAFE_INTEGER:Minsafeinteger is the largest safe integer value (9007199254740991)above this value JS can produce incorrect valus or precision loss will be there</li>
+        </ul>
+    </p>
+
+    <script>
+        let text="Hello,World Jhon mathew JHON Jhon jhon";
+        let indexsearch=text.indexOf("Jhon");
+        console.log(indexsearch);
+        let indexsearchl=text.lastIndexOf("hari");
+        console.log(indexsearchl);
+        let search=text.search("Hello");
+        console.log(search);
+    </script>
+</body>
+</html>

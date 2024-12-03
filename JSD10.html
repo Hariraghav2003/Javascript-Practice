@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day 10</title>
+</head>
+<body>
+    <h1>Control Statements</h1>
+    <p>
+        Javascript control statements are If..else,else if,Switch statements
+        <ul>
+            <li>
+                in If..else statement there will be a condtion in if block if the condtion is true it will execute the part or if it's false the code define in the else part will be excuted
+            </li>
+            <li>
+                else if statement contains the second condtion if the condtion in the if block is false then it will check the condtion in the else if and if it's true it will be executed
+            </li>
+            <li>
+                Switch statements are same as if statements but it contains three keywords case,default,break. The case contains the code which is wanted to be executed,break is if any one of the case is executed then other part of code will not be executed
+                default is like else part 
+            </li>
+        </ul>
+    </p>
+    <h1>Looping Statements</h1>
+    <p>
+        Looping statements are used to iterate over the elements which is of 5 types:for loop,for..of,for..in,while,do..while
+        <ul>
+            <li>forloop:used to iterate over the elements based on condtion and has iterable part </li>
+            <li>for..of:used to diplay the javascript array </li>
+            <li>for..in:used to display the object elements</li>
+            <li>while:used to iterate over the element based on condtion but it doesn't have any iterables</li>
+            <li>do..while:same as while but the do part is always executed</li>
+        </ul>
+    </p>
+    <h1>Break </h1>
+    <p>
+        break statements are continue,jump
+        <ul>
+            <li>continue is used to execute the code</li>
+            <li>break is used to stop the code at a point</li>
+        </ul>
+    </p>
+    <script>
+        let x=5;
+        if(x>=5){
+            console.log("true");
+        }
+        else{
+            console.log("false");
+        }
+        switch(x){
+            case 0:
+                console.log(0);
+            case 1:
+                console.log(1);
+            case 2:
+                console.log(2);
+            default:
+                console.log("no match found");
+                console.timeLog(x);
+        }
+    </script>
+</body>
+</html>

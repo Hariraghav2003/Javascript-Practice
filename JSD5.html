@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day 5</title>
+    <style>
+        button{
+            border: 0px;
+            background-color: #059862;
+            color:white;
+            padding:10px;
+            margin-left:10px;;
+            border-radius: 15px;
+            
+        }
+        .try{
+            display: flex;
+            flex-flow: row wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Strings and methods!!</h1>
+    <p>
+        String are the collection of characters or combination of characters and there are many methods to access these Strings they are,
+        <ol>
+            <li>String.length:used to find the length of the given string</li>
+            <li>Sting.charAt():Used to extract the character from the string based on the index value</li>
+            <li>String.charCodeAt():Same as charAt() but it returns that character's unicode value</li>
+            <li>String.at():Same as charAt() but it allows negative index values i.e from last</li>
+            <li>String[]:Same as charAt() but if the character at the given postion is not found it will return undefined whereas charAt returns empty string</li>
+            <li>
+                String.slice(Start,End):used to extract the part of the string based on index value given in the start and end
+                but the character in the end value will not be included
+            </li>
+            <li>
+                String.substring(Start,End):same as slice but negative index values are considerd as 0
+            </li>
+            <li>
+                String.substr(Start,length):same as slice but the endvalue will be length if we give 1 as start value it will return the characters upto
+                the length value if length value is not given it will take upto end of the string (This functionality is applicable to slice())
+            </li>
+            <li>String.touppercase():To convert the string to uppercase</li>
+            <li>String.tolowercase():To convert the string to lowercase</li>
+            <li>String.concat():To merge two strings</li>
+            <li>String.trim():To remove the whitespace</li>
+            <li>String.trimStart():To remove the whitespace before the text</li>
+            <li>String.trimEnd():To remove the whitespace after the text</li>
+            <li>String.padStart():To concate the values based on the index before text</li>
+            <li>String.padEnd():To concate the values based on the index after text</li>
+            <li>String.repeat():To repeat a string based on the value </li>
+            <li>String.replace():To replace  single characters in the given string based on the given text inside the replace it's case senstive so we use /i </li>
+            <li>String.replaceAll(): Same as replace but it will replace All the occurance </li>
+            <li>String.split():To convert string to character array based on " Comma (,) " spaces and  pipes</li>
+        </ol>
+    </p>
+    <div class="try">
+        <button onclick="uppercase()"> Click to convert the text to uppercase</button>
+       
+        <button onclick="lowercase()"> Click to convert the text to lowercase</button>
+        
+        <button onclick="concat()"> Click to concat any string with Hari</button> 
+    </div>
+    <p id="uc"></p>
+    <p id="lc"></p>
+    <p id="cc"></p>
+    <script>
+        function uppercase(){
+            let normal=prompt("Enter a text:");
+            let uppercase=normal.toUpperCase();
+            document.getElementById("uc").innerHTML="The user given text is "+ normal+ " which is converted into "+uppercase+" as uppercase";
+        }
+        function lowercase(){
+            let normal=prompt("Enter a text:");
+            let lowercase=normal.toLowerCase();
+            document.getElementById("lc").innerHTML="The user given text is "+ normal+ " which is converted into "+lowercase+" as lowercase";
+        }
+        function concat(){
+            let string="Hari";
+            let cstring=prompt("Enter a text to concat with"+string);
+            let concatedstring=string.concat('',cstring);
+            document.getElementById("cc").innerHTML="The user entered text "+cstring+" is concated with "+string+" :"+concatedstring;
+        }
+    </script>
+    <script>
+        let text = "BananA,Apple";
+        let length=text.length;
+        console.log(length);
+        let a=text.charAt(6);
+        console.log(a);
+        let u=text.charCodeAt(6);
+        console.log(u);
+        console.log(text.at(-3));
+        console.log(text[13]);//Returns undefined
+        console.log(text.charAt(13))//Returns Empty String
+        let part = text.slice(2,6);
+        console.log(part);
+        let substring=text.substring(6);
+        console.log(substring);
+        let substr=text.substr(4,4);
+        console.log(substr); 
+        let split=text.split("");
+        console.log(split);
+        let replace=text.replace(/A/i, "red");
+        console.log(replace);
+    </script>
+</body>
+</html>

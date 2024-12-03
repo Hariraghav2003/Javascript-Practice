@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Day 4</title>
+</head>
+<body>
+    <h1>JavaScript Events!!</h1>
+    <p>
+        JavaScript events are used to handle the behaviour of a HTML page using JavaScript 
+        for example if we click or if we perform any action it should perform an event there are many event
+        handlers in an HTML but the most used JavaScript events are,
+        <ul>
+            <li>Onclick():If we click a html element it should perform a function</li>
+            <li>ondblclick():If we double click a HTML event it should perform a function</li>
+            <li>onmouseover():If move the mouse over a HTML event it should perform a function</li>
+            <li>onchange()</li>
+        </ul>
+    </p>
+    <h4>Onclick</h4>
+    <button onclick="mynamecl()">Click the button</button> <br>
+    <p>If we click the above button it will trigger mynamecl function</p>
+    <code>
+        < button > onclick="mynamecl()">Click the button < /button > <br>
+        function mynamecl(){ <br>
+            document.getElementById("hello").innerHTML="Hello I am Hariraghav"; <br>
+        } <br>
+    </code>
+    <p>In the above we have declared the button element with a onclick event so if we click that button it will trigger the function declared inside the onclick event keyword </p>
+    <p id="hello"></p>
+
+    <h4>Ondblclick</h4>
+    <button ondblclick="mynamedcl()">Double click the button</button> <br>
+    <p>If we double click the above button it will trigger mynamedcl function</p>
+    <code>
+        < button > onclick="mynamedcl()">Double Click the button < /button > <br>
+        function mynamedcl(){ <br>
+            document.getElementById("hi").innerHTML="Hello I am Hariraghav"; <br>
+        } <br>
+    </code>
+    <p>In the above we have declared the button element with a ondblclick event so if we double click that button it will trigger the function declared inside the ondblclick event keyword </p>
+    <p id="hi"></p>  
+    
+    <h4>Onmouseover</h4>
+    <button onmouseover="mynameover()"> Hover through the mouse </button> <br>
+    <p>If we Hover through the mouse  it will trigger mynameover function</p>
+    <code>
+        < button > onclick="mynameover()">  Hover through the mouse  < /button > <br>
+        function mynameover(){ <br>
+            document.getElementById("over").innerHTML="Hello I am Hariraghav"; <br>
+        } <br>
+    </code>
+    <p>In the above we have declared the button element with a onmouseover event so if we hover that button it will trigger the function declared inside the onmouseover event keyword </p>
+    <p id="over"></p>
+    <button onclick="check()">Check</button>
+
+    <script>
+         function mynamecl(){
+            document.getElementById("hello").innerHTML="Hello I am Hariraghav";
+        }       
+        function mynamedcl(){
+            document.getElementById("hi").innerHTML="Hello I am Hariraghav";
+        }
+        function mynameover(){
+            document.getElementById("over").innerHTML="Hello I am Hariraghav";
+        }
+        function check(){
+           window.alert( "Hello Alert 1");
+        }
+    </script>
+</body>
+</html>
